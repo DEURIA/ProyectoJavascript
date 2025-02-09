@@ -1,0 +1,16 @@
+let sugerencias=[
+    'Costa Rica',
+    'Spain',
+    'Germany',
+    'Japan',
+    'China',
+    'India',
+    'Honduras',
+    'Nicaragua',
+    'Italy',
+    'Germany',
+    'Mexico',
+    'Peru',
+    'Cuba',
+    'France',
+] /*esto es para la vieja forma de sugerencias*/

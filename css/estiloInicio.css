@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /*degradado*/
+    font-family: 'Poppins', sans-serif;
+    padding: 86px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*pide de pagina*/
+footer{
+    font-size: 10px;
+    padding: 27px;
+    text-align:left; /* Para centrar el texto */
+    left: 130px; /* Alineado a la izquierda */
+    bottom: 0; /* Colocado en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+    align-items: center; /* Alinea verticalmente el contenido */
+   
+}
+/* Estilo del título */
+h1 {
+    text-align: center;
+    font-size: clamp(25px, 5vw, 50px); /* Tamaño flexible */
+    color: #4B5563 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    
+}
+/**************************************************/
+/* MEDIA QUERIES: Ajustes en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    h1 {
+        font-size: clamp(20px, 6vw, 35px); /* Reducir tamaño en pantallas más pequeñas */
+    }
+}
+
+/* MEDIA QUERIES: Ajustes para pantallas muy pequeñas (dispositivos como teléfonos pequeños) */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+    .contenedor {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: clamp(18px, 8vw, 30px); /* Ajuste aún más pequeño para pantallas muy pequeñas */
+    }
+    footer {
+        font-size: 7px;
+        padding: 15px; 
+        text-align: center; 
+        display: block; 
+    }
+}
+
+/* MEDIA QUERIES: Ajustes en pantallas más grandes*/
+@media (min-width: 769px) {
+    .contenedor {
+        width: 80%;
+        padding: 25px;
+    }
+
+    h1 {
+        /*font-size: clamp(30px, 4vw, 50px); /* Ajustar título a pantallas grandes */
+        font-size: 22px;
+    }
+
+    footer {
+        font-size: 8px;
+        text-align: center;
+    }
+}
+
+
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1, .contenedor {
+    animation: fadeIn 1s ease-in-out;
+}

@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /*degradado*/
+    font-family: 'Poppins',sans-serif;
+    padding: 86px;
+    color: #333;
+}
+h1{
+    text-align: center;
+    font-size: clamp(25px, 5vw, 50px); /* Tamaño flexible */
+    color: #4B5563 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+/*pide de pagina*/
+footer{
+    font-size: 10px;
+    padding: 27px;
+    text-align: center;
+    left: 130px; /* Alineado a la izquierda */
+    bottom: 0; /* Colocado en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+    align-items: center; /* Alinea verticalmente el contenido */
+   
+}
+/************************************************************************************************/
+/*contendor principal*/
+.contenedorPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   /* background: white;*//*color de fondo*/
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/ /*sombra*/
+    animation: slideUp 1s ease-in-out;
+}
+
+/*contenedor del buscador*/
+.buscadorContenedor{
+    width: 70%;
+    position: relative;
+    background: linear-gradient(135deg,  #a8edea 0%, #fed6e3 100%); /*degradado abajito*/
+    border-radius: 6px;
+}
+
+/*para la cajita del buscador de antes, la barra*/
+.buscadorContenedor input{
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+   /* background: #f9f9f9;*/
+   box-shadow: inset 0 2px 4px rgba(90, 89, 89, 0.1);
+
+}
+
+.icono{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #285249;
+    
+   
+}
+
+#informacion{
+   margin-top:20px;
+}
+
+/************del javascript**********/
+/*BANDERA*/
+.contenedorPrincipal .imgbanderas{ /*para la clase que tengo en el js para la img de la bandera*/
+    display: block;
+    width: 40%;
+    margin:20px auto; /*para q se centre*/
+    border-radius: 5px ;
+}
+
+/*H2*/
+.contenedorPrincipal h2{
+    font-weight: 600;
+    color:rgb(22, 26, 23);
+    text-align:center;
+    text-transform:uppercase ;/*convertir letras*/
+    letter-spacing: 4px; /*espacio entre lterras*/
+    margin-bottom: 20px;
+    font-size: clamp(18px, 3vw, 25px); /* Tamaño flexible */
+
+}
+ /*delsegundo div*/
+.informacionContenedorData{
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    margin-left: 20px ;
+}
+/*del h4*/
+.contenedorPrincipal h4{
+    display: inline;
+    color:rgb(30, 36, 32);
+    font-weight: 600px;
+}
+
+/*del SPAN*/
+.contenedorPrincipal span{
+    color:rgb(76, 112, 167)
+}
+
+.contenedorPrincipal h3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300px;
+    color:rgb(192, 29, 29);
+}
+
+/******para los contendor de las sugerencias*****/
+/*segundo contenedor*/
+.contendorSugerencias{
+    max-height: 280px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/*para lo de active*/
+.buscadorContenedor.active .contendorSugerencias{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 10px 8px;
+    display: block
+}
+
+/*para la lista con lo de active*/
+.buscadorContenedor.active .contendorSugerencias li{
+    display: block;
+}
+
+/* la li*/
+.contendorSugerencias li{
+  list-style: none;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  color: black;
+}
+
+.contendorSugerencias li:hover {
+    background-color: #a8edea;
+}
+
+/* MEDIA QUERIES: Ajustes en pantallas más pequeñas */
+@media (max-width: 1024px) {
+    body {
+        padding: 50px; /* Reducir padding en pantallas más grandes pero aún pequeñas */
+    }
+
+    .contenedorPrincipal {
+        width: 85%; /* Aumentar el ancho para tablets */
+        padding: 20px;
+    }
+
+    .buscadorContenedor {
+        width: 80%; /* Ajustar tamaño del buscador */
+    }
+
+    .imgbanderas {
+        width: 50%; /* Ajustar imagen para que no ocupe tanto espacio */
+        max-width: 200px; /* Limitar tamaño máximo */
+    }
+
+    h1 {
+        font-size: clamp(22px, 4vw, 45px); /* Ajustar tamaño de fuente de manera flexible */
+    }
+
+    .contenedorPrincipal h2 {
+        font-size: clamp(16px, 3.5vw, 22px); /* Ajuste de tamaño en pantallas más pequeñas */
+    }
+
+    .contenedorPrincipal h3 {
+        font-size: 15px;
+    }
+
+    .contenedorPrincipal h4 {
+        font-size: 16px; /* Ajustar tamaño de h4 */
+    }
+
+    .contendorSugerencias {
+        max-height: 250px; /* Ajustar altura máxima para sugerencias */
+    }
+
+    .buscadorContenedor input {
+        font-size: 14px; /* Reducir tamaño de la fuente para inputs */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px; /* Menos espacio en pantallas más pequeñas */
+    }
+
+    .contenedorPrincipal {
+        width: 90%; /* Aumentar el ancho del contenedor principal */
+        padding: 15px;
+    }
+
+    .buscadorContenedor {
+        width: 90%; /* Buscar adaptabilidad */
+    }
+
+    .imgbanderas {
+        width: 60%; /* Ajustar imagen para pantallas pequeñas */
+        max-width: 180px;
+    }
+    .contenedorPrincipal h2 {
+        font-size: clamp(14px, 3vw, 20px); /* Ajuste dinámico */
+    }
+    .contenedorPrincipal h3 {
+        font-size: 14px; /* Reducir tamaño de h3 */
+    }
+    .contenedorPrincipal h4 {
+        font-size: 14px; /* Ajustar tamaño de h4 */
+    }
+    .buscadorContenedor input {
+        font-size: 13px; /* Ajuste para móviles */
+    }
+    .contendorSugerencias {
+        max-height: 200px; /* Menor altura en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Menos espacio en móviles */
+    }
+
+    .contenedorPrincipal {
+        width: 100%; /* Hacer que el contenedor ocupe todo el ancho */
+        padding: 10px;
+    }
+
+    .buscadorContenedor {
+        width: 100%; /* Ampliar el buscador para pantallas pequeñas */
+    }
+
+    .imgbanderas {
+        width: 70%; /* Aumentar tamaño en móviles */
+        max-width: 150px;
+    }
+
+    .contenedorPrincipal h2 {
+        font-size: 18px; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .contenedorPrincipal h3 {
+        font-size: 13px; /* Reducir aún más el tamaño de texto */
+    }
+
+    .contenedorPrincipal h4 {
+        font-size: 13px; /* Ajustar tamaño de h4 */
+    }
+
+    .buscadorContenedor input {
+        font-size: 12px; /* Font más pequeña para móviles */
+    }
+
+    .contendorSugerencias {
+        max-height: 180px; /* Ajustar altura para móviles */
+        padding: 12px 15px;
+    }
+
+}
+
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
