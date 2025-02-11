@@ -8,8 +8,11 @@ body{
     width: 100%;
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /*degradado*/
     font-family: 'Poppins',sans-serif;
-    padding: 86px;
+    margin: auto;
+    padding: 70px;
     color: #333;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     text-align: center;
@@ -21,15 +24,14 @@ h1{
 }
 /*pide de pagina*/
 footer{
-    font-size: 10px;
+    width: 100%;
     padding: 27px;
-    text-align: center;
-    left: 130px; /* Alineado a la izquierda */
-    bottom: 0; /* Colocado en la parte inferior */
-    width: 100%; /* Ocupa todo el ancho de la página */
+    text-align: left;
     display: flex;
-    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
-    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10px;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
    
 }
 /************************************************************************************************/

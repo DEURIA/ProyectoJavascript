@@ -1,0 +1,79 @@
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Añadí un pequeño espacio para mejor visualización */
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.imagen {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    transition: width 0.5s ease, height 0.5s ease;
+    flex-shrink: 0;
+}
+
+.imagen:hover {
+    width: 300px;
+}
+
+/* Estilo de las imágenes */
+.imagen img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1);
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* MEDIA QUERIES */
+
+/* Dispositivos grandes (pantallas mayores a 1200px) */
+@media (min-width: 1200px) {
+    .imagen {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .imagen:hover {
+        width: 350px;
+    }
+}
+
+/* Tablets (pantallas entre 768px y 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .imagen {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .imagen:hover {
+        width: 250px;
+    }
+}
+
+/* Móviles (pantallas menores a 768px) */
+@media (max-width: 767px) {
+    .contenedor-imagenes {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: center; /* Centra las imágenes */
+    }
+    
+    .imagen {
+        width: 150px;
+        height: 150px;
+    }
+
+    .imagen:hover {
+        width: 200px;
+    }
+}

@@ -7,26 +7,24 @@
 
 body {
     width: 100%;
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /*degradado*/
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     font-family: 'Poppins', sans-serif;
     padding: 86px;
     color: #333;
 }
 
-/*pide de pagina*/
-footer{
+footer {
     font-size: 10px;
     padding: 27px;
-    text-align:left; /* Para centrar el texto */
-    left: 130px; /* Alineado a la izquierda */
-    bottom: 0; /* Colocado en la parte inferior */
-    width: 100%; /* Ocupa todo el ancho de la página */
+    text-align: left;
+    left: 130px;
+    bottom: 0;
+    width: 100%;
     display: flex;
-    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
-    align-items: center; /* Alinea verticalmente el contenido */  
+    justify-content: flex-start;
+    align-items: center;
 }
 
-/* Estilo del título */
 h1 {
     text-align: center;
     font-size: clamp(25px, 5vw, 50px);
@@ -35,17 +33,16 @@ h1 {
     letter-spacing: 2px;
     animation: fadeIn 1s ease-in-out;
 }
-.regionSelect{
+
+.regionSelect {
     background-color: aliceblue;
 }
 
-/* Contenedor principal */
 .contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   /* background: white;*/
     border-radius: 12px;
     padding: 25px;
     width: 90%;
@@ -55,7 +52,6 @@ h1 {
     animation: slideUp 1s ease-in-out;
 }
 
-/* Lista de países */
 #listaPaises {
     margin-top: 20px;
     display: flex;
@@ -64,11 +60,10 @@ h1 {
     gap: 10px;
 }
 
-/* Estilo de los países de los item*/
 .itemPais {
     cursor: pointer;
     padding: 10px 15px;
-    background: #4F46E5; /* Azul vibrante */
+    background: #4F46E5;
     color: white;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -81,7 +76,6 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Sección de detalles del país */
 #paisDetalles {
     margin-top: 20px;
     text-align: center;
@@ -92,46 +86,41 @@ h1 {
     animation: fadeIn 1s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura que los elementos dentro se centren */
+    align-items: center;
 }
 
-/* Imagen de la bandera */
 #banderaPais {
-     width: 100%;  /* Asegura que la bandera ocupe el 100% del ancho disponible */
-    max-width: 300px;  /* Limita el tamaño máximo de la imagen */
+    width: 100%;
+    max-width: 300px;
     margin-top: 15px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-    display: none;
-    text-align: center; /* Centra la imagen dentro de su contenedor */
+    display: block;
+    text-align: center;
 }
 
 #banderaPais:hover {
     transform: scale(1.1) rotate(2deg);
 }
 
-/*estilo para el select****/
-/* Estilo del select */
-select { 
+select {
     border: none;
     border-radius: 8px;
     padding: 12px 20px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    color: #4B5563; /* Color suave acorde al diseño */
+    color: #4B5563;
     transition: all 0.3s ease;
-    width: 100%; /* Asegura que ocupe el ancho disponible */
+    width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Cuando el select tiene el foco (cuando está seleccionado) */
 select:focus {
     outline: none;
-    border: 2px solid #f5f5f5; /* Resalta con un borde azul suave */
-    box-shadow: 0 0 8px rgba(79, 70, 229, 0.5); /* Sombra sutil */
+    border: 2px solid #f5f5f5;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.5);
 }
 
-/* Estilo de los elementos dentro del select */
 select option {
     background: white;
     color: #4B5563;
@@ -140,13 +129,12 @@ select option {
     transition: background 0.3s ease;
 }
 
-/* Cambio de color de fondo al pasar el cursor sobre las opciones */
 select option:hover {
     background-color: #f68efa;
     color: white;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,8 +146,6 @@ h2{
     animation: fadeIn 1s ease-in-out;
 }
 
-
-/* MEDIA QUERIES: Ajustes en pantallas más pequeñas */
 @media (max-width: 768px) {
     .contenedor {
         width: 90%;
@@ -167,101 +153,57 @@ h2{
         padding: 15px;
     }
     h1 {
-        font-size: clamp(20px, 6vw, 35px); /* Reducir tamaño del título */
+        font-size: clamp(20px, 6vw, 35px);
     }
-
     #listaPaises {
         gap: 5px;
     }
-
     .itemPais {
-        font-size: 14px; /* Tamaño más pequeño para los botones */
+        font-size: 14px;
         padding: 8px 12px;
     }
-
     #paisDetalles {
-        width: 100%; /* Asegurarse de que los detalles del país se ajusten al 100% */
+        width: 100%;
     }
-
     #banderaPais {
-        width: 100%; /* La bandera será más grande en pantallas pequeñas */
+        width: 100%;
     }
-
-    footer{
+    footer {
         font-size: 8px;
         padding: 20px;
         text-align: center;
     }
-
-    #regionSelect{
-        font-size: 10px;
-        padding: 20px;
-       
-    }
 }
 
-
-/* MEDIA QUERIES: Ajustes para pantallas muy pequeñas (dispositivos como teléfonos pequeños) */
 @media (max-width: 480px) {
     body {
         padding: 20px;
     }
-
     .contenedor {
         padding: 10px;
         margin: 10px auto;
     }
-
     h1 {
-        font-size: clamp(18px, 8vw, 30px); /* Ajuste más pequeño para pantallas muy pequeñas */
+        font-size: clamp(18px, 8vw, 30px);
     }
-
     .itemPais {
         font-size: 12px;
         padding: 6px 10px;
     }
-
     #paisDetalles {
         padding: 10px;
     }
-
     #banderaPais {
-        width: 150px; /* Hacer la bandera más pequeña */
+        width: 150px;
         margin-top: 10px;
     }
     footer {
         font-size: 7px;
-        padding: 15px; 
-        text-align: center; 
-        display: block; 
-    }
-
-    #regionSelect{
-        font-size: 9px;
-        padding: 18px;
-       
+        padding: 15px;
+        text-align: center;
     }
 }
 
-/* MEDIA QUERIES: Ajustes en pantallas más grandes (por ejemplo, tablets y pantallas grandes) */
-@media (min-width: 769px) {
-    .contenedor {
-        width: 80%;
-        padding: 25px;
-    }
-    h1 {
-        font-size: clamp(30px, 4vw, 50px); /* Ajustar título a pantallas grandes */
-    }
-    .itemPais {
-        font-size: 16px;
-        padding: 12px 18px;
-    }
-    #paisDetalles {
-        width: 80%;
-    }
-}
-
-/* ANIMACIONES */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
