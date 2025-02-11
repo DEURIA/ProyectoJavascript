@@ -3,36 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body{
+body {
     width: 100%;
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /*degradado*/
-    font-family: 'Poppins',sans-serif;
-    margin: auto;
-    padding: 70px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0; /* <--- Reduce o elimina este padding */
+    margin: 0; /* Asegura que no haya margen extra */
     color: #333;
-    display: flex;
-    flex-direction: column;
+    line-height: 1.6;
 }
-h1{
+
+
+header, .navbar {
+    margin: 3px;
+    padding: 3px;
+}
+
+footer {
+    font-size: 10px;
+    padding: 27px;
+    text-align: left;
+    left: 130px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
     text-align: center;
-    font-size: clamp(25px, 5vw, 50px); /* Tamaño flexible */
+    font-size: clamp(25px, 5vw, 50px);
     color: #4B5563 !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     animation: fadeIn 1s ease-in-out;
-}
-/*pide de pagina*/
-footer{
-    width: 100%;
-    padding: 27px;
-    text-align: left;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 10px;
-    margin-top: auto; /* Empuja el footer hacia la parte inferior */
-   
 }
 /************************************************************************************************/
 /*contendor principal*/
@@ -172,7 +177,7 @@ footer{
 }
 
 /* MEDIA QUERIES: Ajustes en pantallas más pequeñas */
-@media (max-width: 1024px) {
+@media (max-width: 769px) {
     body {
         padding: 50px; /* Reducir padding en pantallas más grandes pero aún pequeñas */
     }
@@ -213,6 +218,10 @@ footer{
 
     .buscadorContenedor input {
         font-size: 14px; /* Reducir tamaño de la fuente para inputs */
+    }
+    footer {
+        font-size: 8px;
+        text-align: center;
     }
 }
 
